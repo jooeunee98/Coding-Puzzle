@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
@@ -49,37 +50,92 @@ public class GameManager : MonoBehaviour
 
     IEnumerator MakeStage()
     {
+        float x = 0;
+        float z = 0;
+        string[] str = GroundSet.stage[stageNum - 1];
 
-        for (int i = 0; i < 5; i++)
+        foreach (string t in str)
         {
-            for (int j = 0; j < 5; j++)
+            char[] ch = t.Trim().ToCharArray();
+            x = 0;
+            foreach (char c in ch)
             {
-                GameObject block = Instantiate(Resources.Load("prefab/Grass 01"), new Vector3(i, 0, j), Quaternion.identity) as GameObject;
-                float y = 0;
-                float s = 0.2f;
-                for(int k = 0; k < 5; k++)
+                switch (c)
                 {
-                    block.transform.position = new Vector3(i, y, j);
-                    block.transform.localScale = new Vector3(s, s, s);
-                    yield return new WaitForSeconds(0.03f);
-                    y += 0.1f;
-                    s += 0.2f;
-                    
-                }
-                for (int k = 0; k < 5; k++)
-                {
-                    block.transform.position = new Vector3(i, y, j);
-                    yield return new WaitForSeconds(0.03f);
-                    y -= 0.1f;
+
+                    case '1':
+                        GameObject Ground1 = Instantiate(Resources.Load("prefab/Grass 01")) as GameObject;
+                        float y1 = 0;
+                        float s1 = 0;
+                        for (int k = 0; k <= 5; k++)
+                        {
+                            Ground1.transform.position = new Vector3(x, y1, z);
+                            Ground1.transform.localScale = new Vector3(s1, s1, s1);
+                            yield return new WaitForSeconds(0.03f);
+                            y1 += 0.1f;
+                            s1 += 0.2f;
+
+                        }
+                        for (int k = 0; k < 5; k++)
+                        {
+                            Ground1.transform.position = new Vector3(x, y1, z);
+                            yield return new WaitForSeconds(0.03f);
+                            y1 -= 0.1f;
+
+                        }
+                        x++;
+                        break;
+
+                    case '2':
+                        GameObject Water1 = Instantiate(Resources.Load("prefab/Water 01")) as GameObject;
+                        GameObject Water2 = Instantiate(Resources.Load("prefab/Water 02")) as GameObject;
+                        float y2 = 0.25f;
+                        float s2 = 0;
+                        float y3 = 0;
+                        float s3 = 0;
+                        for (int k = 0; k <= 5; k++)
+                        {
+                            Water1.transform.position = new Vector3(x, y2, z);
+                            Water1.transform.localScale = new Vector3(s2, s2, s2);
+                            Water2.transform.position = new Vector3(x, y3, z);
+                            Water2.transform.localScale = new Vector3(s3, s3, s3);
+                            yield return new WaitForSeconds(0.03f);
+                            y3 += 0.1f;
+                            s3 += 0.2f;
+                            y2 += 0.1f;
+                            s2 += 0.2f;
+
+                        }
+                        for (int k = 0; k <= 5; k++)
+                        {
+                            Water1.transform.position = new Vector3(x, y2, z);
+                            Water2.transform.position = new Vector3(x, y3, z);
+                            yield return new WaitForSeconds(0.03f);
+                            y2 -= 0.1f;
+                            y3 -= 0.1f;
+                        }
+                        x++;
+                        break;
+
+                    case '3':
+                        x++;
+                        break;
+
+
+                   
+
 
                 }
-               
-
             }
+
+            //한줄 아래로 이동
+            z++;
         }
+      
         StartCoroutine(MakeMaze());
 
     }
+
     IEnumerator MakeMaze()
     {
         float x = 0;
