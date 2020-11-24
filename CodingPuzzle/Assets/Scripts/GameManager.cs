@@ -65,60 +65,60 @@ public class GameManager : MonoBehaviour
 
                     case '1':
                         GameObject Ground1 = Instantiate(Resources.Load("prefab/Grass 01")) as GameObject;
-                        float y1 = 0;
-                        float s1 = 0;
+                        int y1 = 0;
+                        int s1 = 0;
                         for (int k = 0; k <= 5; k++)
                         {
                             Ground1.transform.position = new Vector3(x, y1, z);
                             Ground1.transform.localScale = new Vector3(s1, s1, s1);
-                            yield return new WaitForSeconds(0.03f);
-                            y1 += 0.1f;
-                            s1 += 0.2f;
+                            yield return new WaitForSeconds(0.02f);
+                            y1 += 20;
+                            s1 += 5;
 
                         }
-                        for (int k = 0; k < 5; k++)
+                        for (int k = 0; k <= 5; k++)
                         {
                             Ground1.transform.position = new Vector3(x, y1, z);
-                            yield return new WaitForSeconds(0.03f);
-                            y1 -= 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y1 -= 13;
 
                         }
-                        x++;
+                        x+=25;
                         break;
 
                     case '2':
                         GameObject Water1 = Instantiate(Resources.Load("prefab/Water 01")) as GameObject;
                         GameObject Water2 = Instantiate(Resources.Load("prefab/Water 02")) as GameObject;
-                        float y2 = 0.25f;
-                        float s2 = 0;
-                        float y3 = 0;
-                        float s3 = 0;
+                        int y2 = 0;
+                        int s2 = 0;
+                        int y3 = 0;
+                        int s3 = 0;
                         for (int k = 0; k <= 5; k++)
                         {
                             Water1.transform.position = new Vector3(x, y2, z);
                             Water1.transform.localScale = new Vector3(s2, s2, s2);
                             Water2.transform.position = new Vector3(x, y3, z);
                             Water2.transform.localScale = new Vector3(s3, s3, s3);
-                            yield return new WaitForSeconds(0.03f);
-                            y3 += 0.1f;
-                            s3 += 0.2f;
-                            y2 += 0.1f;
-                            s2 += 0.2f;
+                            yield return new WaitForSeconds(0.02f);
+                            y3 += 20;
+                            s3 += 5;
+                            y2 += 20;
+                            s2 += 5;
 
                         }
                         for (int k = 0; k <= 5; k++)
                         {
                             Water1.transform.position = new Vector3(x, y2, z);
                             Water2.transform.position = new Vector3(x, y3, z);
-                            yield return new WaitForSeconds(0.03f);
-                            y2 -= 0.1f;
-                            y3 -= 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y2 -= 13;
+                            y3 -= 13;
                         }
-                        x++;
+                        x+=25;
                         break;
 
                     case '3':
-                        x++;
+                        x+=25;
                         break;
 
 
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
             }
 
             //한줄 아래로 이동
-            z++;
+            z+=25;
         }
       
         StartCoroutine(MakeMaze());
@@ -138,8 +138,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator MakeMaze()
     {
-        float x = 0;
-        float z = 0;
+        int x = 0;
+        int z = 0;
         string[] str = StageSet.stage[stageNum - 1];
 
         foreach (string t in str)
@@ -154,100 +154,78 @@ public class GameManager : MonoBehaviour
                     case '1':
                         GameObject tree1 = Instantiate(Resources.Load("prefab/Tree01")) as GameObject;
                         float y1 = 0;
-                        float s1 = 0;
-                        for (int k = 0; k < 5; k++)
+                        int s1 = 0;
+                        for (int k = 0; k <= 5; k++)
                         {
                             tree1.transform.position = new Vector3(x, y1, z);
                             tree1.transform.localScale = new Vector3(s1, s1, s1);
-                            yield return new WaitForSeconds(0.03f);
-                            y1 += 0.1f;
-                            s1 += 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y1 += 20f;
+                            s1 += 2;
 
                         }
-                        for (int k = 0; k < 5; k++)
+                        for (int k = 0; k <= 5; k++)
                         {
                             tree1.transform.position = new Vector3(x, y1, z);
-                            yield return new WaitForSeconds(0.03f);
-                            y1 -= 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y1 -= 13.5f;
 
                         }
-                        x++;
+                        x+=25;
                         break;
 
                     case '2':
                         GameObject tree2 = Instantiate(Resources.Load("prefab/Tree02")) as GameObject;
-                        float y2 = 0.4f;
-                        float s2 = 0;
-                        for (int k = 0; k < 5; k++)
+                        float y2 = 0;
+                        int s2 = 0;
+                        for (int k = 0; k <= 5; k++)
                         {
                             tree2.transform.position = new Vector3(x, y2, z);
                             tree2.transform.localScale = new Vector3(s2, s2, s2);
-                            yield return new WaitForSeconds(0.03f);
-                            y2 += 0.1f;
-                            s2 += 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y2 += 20f;
+                            s2 += 2;
 
                         }
-                        for (int k = 0; k < 5; k++)
+                        for (int k = 0; k <= 5; k++)
                         {
                             tree2.transform.position = new Vector3(x, y2, z);
-                            yield return new WaitForSeconds(0.03f);
-                            y2 -= 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y2 -= 11.5f;
 
                         }
-                        x++;
+                        
+                        x+=25;
                         break;
 
                     case '3':
-                        x++;
+                        x+=25;
                         break;
 
 
-                    case '4':
-                        GameObject trap01 = Instantiate(Resources.Load("prefab/Trap 01")) as GameObject;
-                        trap01.transform.position = new Vector3(x, 0, z);
-                        float y3 = 0;
-                        float s3 = 0.2f;
-                        for (int k = 0; k < 5; k++)
-                        {
-                            trap01.transform.position = new Vector3(x, y3, z);
-                            trap01.transform.localScale = new Vector3(s3, s3, s3);
-                            yield return new WaitForSeconds(0.03f);
-                            y3 += 0.1f;
-                            s3 += 0.2f;
-
-                        }
-                        for (int k = 0; k < 5; k++)
-                        {
-                            trap01.transform.position = new Vector3(x, y3, z);
-                            yield return new WaitForSeconds(0.03f);
-                            y3 -= 0.1f;
-
-                        }
-                        x++;
-                        break;
 
                     case '5':
                         GameObject target = Instantiate(Resources.Load("prefab/Target")) as GameObject;
                         target.transform.position = new Vector3(x, 0, z);
                         float y4= 0;
-                        float s4 = 0.1f;
-                        for (int k = 0; k < 5; k++)
+                        int s4 = 0;
+                        for (int k = 0; k <= 5; k++)
                         {
                             target.transform.position = new Vector3(x, y4, z);
                             target.transform.localScale = new Vector3(s4, s4, s4);
-                            yield return new WaitForSeconds(0.03f);
-                            y4 += 0.1f;
-                            s4 += 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y4 += 20f;
+                            s4 += 2;
 
                         }
-                        for (int k = 0; k < 5; k++)
+                        for (int k = 0; k <=5; k++)
                         {
                             target.transform.position = new Vector3(x, y4, z);
-                            yield return new WaitForSeconds(0.03f);
-                            y4 -= 0.1f;
+                            yield return new WaitForSeconds(0.02f);
+                            y4 -= 13.5f;
 
                         }
-                        x++;
+                        x+=25;
                         break;
 
 
@@ -255,7 +233,7 @@ public class GameManager : MonoBehaviour
             }
 
             //한줄 아래로 이동
-            z++;
+            z+=25;
         }
     }
 
