@@ -151,7 +151,7 @@ Transform:
   - {fileID: 1761549790}
   - {fileID: 952956371}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &324484884
 GameObject:
@@ -183,7 +183,7 @@ Transform:
   - {fileID: 1220594318}
   - {fileID: 2143017927}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591499930
 GameObject:
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 952956371}
   - component: {fileID: 952956373}
   - component: {fileID: 952956372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: code_cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,14 +403,18 @@ Transform:
   m_Father: {fileID: 139842894}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
---- !u!81 &952956372
-AudioListener:
+--- !u!114 &952956372
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952956370}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344aaf98859715c4485357717f2d8280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &952956373
 Camera:
   m_ObjectHideFlags: 0
@@ -514,7 +518,7 @@ Transform:
   m_GameObject: {fileID: 1220594317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.95, y: 1, z: 1}
+  m_LocalScale: {x: 3.53, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 324484885}
   m_RootOrder: 0
@@ -591,21 +595,25 @@ GameObject:
   - component: {fileID: 1301657455}
   - component: {fileID: 1301657454}
   - component: {fileID: 1301657453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: map_cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1301657453
-AudioListener:
+--- !u!114 &1301657453
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301657452}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344aaf98859715c4485357717f2d8280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1301657454
 Camera:
   m_ObjectHideFlags: 0
@@ -634,7 +642,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -768,7 +776,8 @@ GameObject:
   - component: {fileID: 2143017927}
   - component: {fileID: 2143017929}
   - component: {fileID: 2143017928}
-  m_Layer: 0
+  - component: {fileID: 2143017930}
+  m_Layer: 8
   m_Name: command_cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,3 +849,15 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2143017930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143017926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344aaf98859715c4485357717f2d8280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
