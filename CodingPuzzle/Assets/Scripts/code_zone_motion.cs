@@ -16,11 +16,11 @@ public class code_zone_motion : MonoBehaviour
     {
         if (timespan <= 1.5)
         {
-            gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * (-267), 0);
+            gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * (-240), 0);
         }
         else if (timespan <= 2)
         {
-            gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * (100), 0);
+            gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * (20), 0);
         }
         timespan += Time.deltaTime;
     }

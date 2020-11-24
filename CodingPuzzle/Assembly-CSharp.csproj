@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\clickFoward.cs" />
     <Compile Include="Assets\Scripts\clickLeft.cs" />
     <Compile Include="Assets\Scripts\clickRight.cs" />
+    <Compile Include="Assets\Scripts\cloudAnimation.cs" />
     <Compile Include="Assets\Scripts\code_zone_motion.cs" />
     <Compile Include="Assets\Scripts\commandList.cs" />
     <Compile Include="Assets\Scripts\commandPop.cs" />

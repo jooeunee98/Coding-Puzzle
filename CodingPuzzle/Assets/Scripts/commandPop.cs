@@ -23,12 +23,12 @@ public class commandPop : MonoBehaviour
         {
             if (timespan < 0.75)
             {
-                gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * 200, 0);
+                gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * 173, 0);
                 timespan += Time.deltaTime;
             }
             else if (timespan < 1)
             {
-                gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * (-120), 0);
+                gameObject.transform.localPosition += new Vector3(0, Time.deltaTime * (-40), 0);
                 timespan += Time.deltaTime;
             }
         }
