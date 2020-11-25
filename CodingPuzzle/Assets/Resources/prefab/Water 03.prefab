@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2703275919315066987}
   - component: {fileID: 2680888013941732877}
   - component: {fileID: 2665696763300480467}
-  m_Layer: 0
-  m_Name: WaterQuadPixies
+  m_Layer: 9
+  m_Name: Water 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 2699510253859657893}
   - component: {fileID: 2857455381665722849}
   - component: {fileID: 2856772216398390497}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WaterPixies
   m_TagString: Untagged
   m_Icon: {fileID: 0}

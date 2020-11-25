@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5926709759292392975}
   - component: {fileID: 5947058887384953809}
   - component: {fileID: 6002521715550778137}
-  m_Layer: 0
-  m_Name: RiverQuadCombined
+  m_Layer: 9
+  m_Name: Water 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 5968943798082358633}
   - component: {fileID: 5793144575057665735}
   - component: {fileID: 5772698108582665163}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WaterPixies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
