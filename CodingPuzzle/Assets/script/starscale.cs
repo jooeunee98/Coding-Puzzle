@@ -8,12 +8,16 @@ public class starscale : MonoBehaviour
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
+    AudioSource audio1;
+    AudioSource audio2;
+    AudioSource audio3;
+    public AudioClip music;
     int i = 0;
     float timespan = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-
+        audio1 = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,20 @@ public class starscale : MonoBehaviour
             if (25 < i && i <= 50)
             {
                 star3.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f); // 짠나타나여
+            }
+            if (i == 1)
+                audio1.Play();
+            if (i == 12)
+            {
+                audio2 = gameObject.AddComponent<AudioSource>();
+                audio2.clip = music;
+                audio2.Play();
+            }
+            if (i == 25)
+            {
+                audio3 = gameObject.AddComponent<AudioSource>();
+                audio3.clip = music;
+                audio3.Play();
             }
             i++;
         }
