@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class clearscale : MonoBehaviour
 {
+
     public GameObject clear;
     int i = 0;
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class clearscale : MonoBehaviour
     void Update()
     {
         if (i < 20)
-        { clear.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+        { clear.transform.localScale += new Vector3(0.3f, 0.2f, 0.2f);
             i++;
         }
     }

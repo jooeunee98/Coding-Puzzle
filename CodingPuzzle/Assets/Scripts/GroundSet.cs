@@ -6,7 +6,6 @@ public class GroundSet : MonoBehaviour
 {
     static public string[][] stage = new string[][]     //1은 땅 2는 물 3은 없어 
             {
-
         new string[]
         {
             "   33333   ",

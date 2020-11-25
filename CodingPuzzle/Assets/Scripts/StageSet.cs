@@ -6,7 +6,6 @@ public class StageSet : MonoBehaviour
 {
     static public string[][] stage = new string[][]     //1은 큰나무 2는 작은나무 3은 길 5는 도착지
           {
-
         new string[]
         {
             "   33333   ",
