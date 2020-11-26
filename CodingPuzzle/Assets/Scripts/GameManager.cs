@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int stageNum = 1;
+
     void Start()
     {
         if (SceneManager.GetActiveScene().name == "Stage02")
