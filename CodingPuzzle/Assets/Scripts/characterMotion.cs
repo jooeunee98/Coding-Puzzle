@@ -26,7 +26,10 @@ public class characterMotion : MonoBehaviour
     void Start()
     {
         comNum = array.GetComponent<commandList>().command.Length;
-        
+        for(int i=0; i<comNum; i++)
+        {
+            commandLoaded[i] = array.GetComponent<commandList>().command[i];
+        }
         animator = GetComponent<Animator>();
         coroutine = readCommand(1.0f);
         StartCoroutine(coroutine);
@@ -35,6 +38,7 @@ public class characterMotion : MonoBehaviour
 
     public IEnumerator readCommand(float waitTime){
         for(int i=0; i<commandLoaded.Length; i++){
+            Debug.Log(i);
             if(commandLoaded[i] == 1){
                 animator.SetBool("idle", false);
                 animator.SetBool("run", true);
