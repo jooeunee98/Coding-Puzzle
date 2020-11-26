@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GroundSet.cs" />
      <Compile Include="Assets\Scripts\StageSet.cs" />
+     <Compile Include="Assets\Scripts\bgmFadeIn.cs" />
      <Compile Include="Assets\Scripts\btnMotion.cs" />
      <Compile Include="Assets\Scripts\characterMotion.cs" />
      <Compile Include="Assets\Scripts\characterSpawn.cs" />
@@ -72,11 +73,11 @@
      <Compile Include="Assets\Scripts\code_zone_motion.cs" />
      <Compile Include="Assets\Scripts\commandList.cs" />
      <Compile Include="Assets\Scripts\commandPop.cs" />
+     <Compile Include="Assets\Scripts\fadeIn.cs" />
      <Compile Include="Assets\Scripts\pressPlay.cs" />
      <Compile Include="Assets\Scripts\sceneChanger.cs" />
      <Compile Include="Assets\Scripts\stagescale.cs" />
      <Compile Include="Assets\Scripts\starscale.cs" />
-     <Compile Include="Assets\Scripts\starsound.cs" />
      <None Include="Assets\SimpleSky\ReadMe.txt" />
      <None Include="Assets\AurynSky\Forest Pack\READ ME.txt" />
  <Reference Include="UnityEngine">
