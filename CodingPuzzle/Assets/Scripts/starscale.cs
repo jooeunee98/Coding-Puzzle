@@ -4,38 +4,60 @@ using UnityEngine;
 
 public class starscale : MonoBehaviour
 {
-    AudioSource audio;
-    public float delaySec = 1.0f;
-    float timeSpan;
-    int trigger = 1;
-    float speed = 10f;
 
+    public GameObject star1;
+    public GameObject star2;
+    public GameObject star3;
+    AudioSource audio1;
+    AudioSource audio2;
+    AudioSource audio3;
+    public AudioClip music;
+    int i = 0;
+    float timespan = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-        audio = gameObject.GetComponent<AudioSource>();
+        
+        audio1 = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(delaySec >= 0)
+        if(timespan >= 0)
         {
-            delaySec -= Time.deltaTime;
+            timespan -= Time.deltaTime;
             return;
         }
         else
         {
-            if (timeSpan > 0 && timeSpan < 0.5)
+            if (0 < i && i < 25)
             {
-                gameObject.transform.localScale += new Vector3((Time.deltaTime * speed), (Time.deltaTime * speed), (Time.deltaTime * speed)); // 짠나타나여
+                star1.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f); // 짠나타나여
             }
-            if (trigger == 1)
+            if (12 < i && i <= 37)
             {
-                audio.Play();
-                trigger = 0;
+                star2.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f); // 짠나타나여
             }
-            timeSpan += Time.deltaTime;
+            if (25 < i && i <= 50)
+            {
+                star3.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f); // 짠나타나여
+            }
+            if (i == 1)
+                audio1.Play();
+            if (i == 12)
+            {
+                audio2 = gameObject.AddComponent<AudioSource>();
+                audio2.clip = music;
+                audio2.Play();
+            }
+            if (i == 25)
+            {
+                audio3 = gameObject.AddComponent<AudioSource>();
+                audio3.clip = music;
+                audio3.Play();
+            }
+            i++;
         }
     }
 }
