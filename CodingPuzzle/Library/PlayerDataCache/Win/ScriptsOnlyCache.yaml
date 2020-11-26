@@ -26,9 +26,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-    UnityEditor.UI.dll:
-    - UnityEditor.UI.ButtonEditor
-    - UnityEditor.UI.RawImageEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -85,33 +82,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11268}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11342}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11626}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11762}
     - Class: 114
-      Script: {instanceID: 11802}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 11914}
+      Script: {instanceID: 11880}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 11912}
     - Class: 114
-      Script: {instanceID: 12680}
+      Script: {instanceID: 12370}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12678}
     - Class: 114
-      Script: {instanceID: 13074}
+      Script: {instanceID: 12734}
+    - Class: 114
+      Script: {instanceID: 13072}
+    - Class: 114
+      Script: {instanceID: 13092}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -174,37 +175,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11342}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 11914}
+      Script: {instanceID: 11912}
     - Class: 114
-      Script: {instanceID: 12070}
+      Script: {instanceID: 12068}
     - Class: 114
-      Script: {instanceID: 12292}
+      Script: {instanceID: 12290}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12556}
     - Class: 114
-      Script: {instanceID: 12680}
+      Script: {instanceID: 12678}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 12778}
+      Script: {instanceID: 12776}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 13094}
+      Script: {instanceID: 13092}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -234,16 +235,16 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 4bc4346a71a8df53a6b106f68ef3a190
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
-  - hash:
-      serializedVersion: 2
       Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Rotator
+  - hash:
+      serializedVersion: 2
+      Hash: 4bc4346a71a8df53a6b106f68ef3a190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: 1354bcbde1540e0e8e5efc8a058c32ae
