@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class sceneChanger : MonoBehaviour
 {
     int currentSceneNo;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
         currentSceneNo = SceneManager.GetActiveScene().buildIndex;
+        audio = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,11 +24,13 @@ public class sceneChanger : MonoBehaviour
     public void nextScene()
     {
         SceneManager.LoadScene(currentSceneNo + 1);
+        audio.Play();
     }
 
     public void restartScene()
     {
         SceneManager.LoadScene(currentSceneNo);
+        audio.Play();
     }
 
     public void goHome()
@@ -37,5 +41,6 @@ public class sceneChanger : MonoBehaviour
     public void exitGame()
     {
         Application.Quit();
+        audio.Play();
     }
 }

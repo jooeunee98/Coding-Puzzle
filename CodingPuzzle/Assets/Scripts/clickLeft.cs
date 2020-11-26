@@ -6,10 +6,13 @@ public class clickLeft : MonoBehaviour
 {
     public GameObject array;
     int indexNo;
+
+    AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,5 +26,6 @@ public class clickLeft : MonoBehaviour
         indexNo = array.GetComponent<commandList>().index;
         array.GetComponent<commandList>().command[indexNo] = 3;
         array.GetComponent<commandList>().index++;
+        audio.Play();
     }
 }
