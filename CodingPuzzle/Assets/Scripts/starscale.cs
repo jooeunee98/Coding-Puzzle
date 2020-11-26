@@ -17,6 +17,7 @@ public class starscale : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         audio1 = gameObject.GetComponent<AudioSource>();
     }
 
