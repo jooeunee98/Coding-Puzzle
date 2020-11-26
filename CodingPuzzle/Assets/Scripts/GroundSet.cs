@@ -80,7 +80,6 @@ public class GroundSet : MonoBehaviour
             "   12112   ",
             "   21121   ",
             "   11211   "
-
         },
 
       };
