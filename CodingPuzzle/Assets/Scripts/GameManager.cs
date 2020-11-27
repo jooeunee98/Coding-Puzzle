@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Stage09")
         {
-            stageNum = 9;
+            stageNum = 1;
         }
         StartCoroutine(MakeStage());
     }

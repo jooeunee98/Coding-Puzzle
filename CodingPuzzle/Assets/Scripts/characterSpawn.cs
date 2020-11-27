@@ -27,6 +27,7 @@ public class characterSpawn : MonoBehaviour
                 gameObject.transform.localScale += new Vector3(Time.deltaTime * 30, Time.deltaTime * 30, Time.deltaTime * 30);
             }
             timespan += Time.deltaTime;
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }
