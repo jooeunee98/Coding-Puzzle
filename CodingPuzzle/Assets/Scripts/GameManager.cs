@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
                     case '2':
                         GameObject Water1 = Instantiate(Resources.Load("prefab/Water 01")) as GameObject;
                         GameObject Water2 = Instantiate(Resources.Load("prefab/Water 02")) as GameObject;
-                        int y2 = 55;
+                        int y2 = 59;
                         int s2 = 0;
                         int y3 = 55;
                         int s3 = 0;
