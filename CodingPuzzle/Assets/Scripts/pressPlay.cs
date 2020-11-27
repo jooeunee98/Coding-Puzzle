@@ -21,6 +21,5 @@ public class pressPlay : MonoBehaviour
     public void play()
     {
         player.AddComponent<characterMotion>();
-        motion.array
     }
 }
