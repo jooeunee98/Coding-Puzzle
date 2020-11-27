@@ -101,7 +101,6 @@ public class characterMotion : MonoBehaviour
         for (int i = 0; i < comNum; i++)
         {
             commandLoaded[i] = array.GetComponent<commandList>().command[i];
-            Debug.Log(commandLoaded[i]);
         }
         if (go_forward == true)
         {

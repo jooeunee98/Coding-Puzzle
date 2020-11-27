@@ -40,7 +40,10 @@ public class checkGoal : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        gameObject.transform.localScale = new Vector3(0, 0, 0);
-        trigger = 1;
+        if (col.tag == "Player")
+        {
+            gameObject.transform.localScale = new Vector3(0, 0, 0);
+            trigger = 1;
+        }
     }
 }
