@@ -25,6 +25,16 @@ public class ObjectDestroy : MonoBehaviour
 
             playBtn.GetComponent<pressPlay>().player = player;
         }
+        else if (col.tag == "clone")
+        {
+            Destroy(player);
+            GameObject Player2 = Instantiate(Resources.Load("prefab/player")) as GameObject;
+            Player2.transform.position = new Vector3(0, 68, 50);
+            Player2.transform.localScale -= new Vector3(15, 15, 15);
+            player = GameObject.FindWithTag("clone");
+
+            playBtn.GetComponent<pressPlay>().player = player;
+        }
     }
     // Update is called once per frame
     void Update()
