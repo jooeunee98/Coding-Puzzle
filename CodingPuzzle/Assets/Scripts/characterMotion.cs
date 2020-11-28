@@ -31,77 +31,82 @@ public class characterMotion : MonoBehaviour
         {
             commandLoaded[i] = array.GetComponent<commandList>().command[i];
         }
-        coroutine = readCommand(3.0f);
+        coroutine = readCommand(1.0f);
         StartCoroutine(coroutine);
+        //Debug.Log("Here1");
+        
 
     }
-
     public IEnumerator readCommand(float waitTime)
     {
+    
+        
         for (int i = 0; i < commandLoaded.Length; i++)
         {
 
             if (commandLoaded[i] == 1)
             {
-                animator.SetBool("idle", false);
+                
                 animator.SetBool("run", true);
-                animator.SetBool("turn", false);
+                animator.SetBool("idle", false);
                 waitTime = 1.0f;
+
                 go_forward = true;
                 turn_left = false;
                 turn_right = false;
+
+                yield return new WaitForSeconds(waitTime);
             }
             else if (commandLoaded[i] == 2)
             {
-                if (i == 1)
-                    animator.SetBool("idle", false);
-                animator.SetBool("run", false);
-                animator.SetBool("turn", true);
+                animator.SetBool("run", true);
+                animator.SetBool("idle", false);
+                waitTime = 1.5f;
+
                 go_forward = false;
                 turn_right = true;
                 turn_left = false;
-                waitTime = 3f;
+
+                yield return new WaitForSeconds(waitTime);
+
             }
             else if (commandLoaded[i] == 3)
             {
+                animator.SetBool("run", true);
                 animator.SetBool("idle", false);
-                animator.SetBool("run", false);
-                animator.SetBool("turn", true);
+                waitTime = 1.5f;
+
                 go_forward = false;
                 turn_left = true;
                 turn_right = false;
-                waitTime = 3f;
+
+                yield return new WaitForSeconds(waitTime);
+
             }
-            else
+            else if(commandLoaded[i] == 0 || i == commandLoaded.Length - 1)
             {
                 go_forward = false;
                 turn_left = false;
                 turn_right = false;
+
+                animator.SetBool("run", false);
+                animator.SetBool("idle", true);
+                StopCoroutine(coroutine);
             }
-            yield return new WaitForSeconds(waitTime);
 
+        
         }
-        animator.SetBool("idle", true);
-        animator.SetBool("run", false);
-        animator.SetBool("turn", false);
-        go_forward = false;
-        turn_left = false;
-        turn_right = false;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("commandLoaded Length : " + commandLoaded.Length);
         comNum = array.GetComponent<commandList>().command.Length;
 
-        //Debug.Log(comNum);
 
         for (int i = 0; i < comNum; i++)
         {
             commandLoaded[i] = array.GetComponent<commandList>().command[i];
-            Debug.Log(commandLoaded[i]);
         }
         if (go_forward == true)
         {
@@ -111,23 +116,30 @@ public class characterMotion : MonoBehaviour
         {
             if (turnDegree < 90)
             {
-                Debug.Log("turnDegree : " + turnDegree);
                 gameObject.transform.Rotate(0, 5, 0);
                 turnDegree += 5;
             }
             else if (turnDegree == 90)
             {
-                Debug.Log("Ok by here");
                 turnDegree = 0;
                 turn_right = false;
+                animator.SetBool("run", false);
+                animator.SetBool("idle", true);
             }
         }
         else if (turn_left == true)
         {
-            if (turnDegree <= 90)
+            if (turnDegree < 90)
             {
                 gameObject.transform.Rotate(0, -5, 0);
                 turnDegree += 5;
+            }
+            else if (turnDegree == 90)
+            {
+                turnDegree = 0;
+                turn_left = false;
+                animator.SetBool("run", false);
+                animator.SetBool("idle", true);
             }
 
         }
