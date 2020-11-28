@@ -26,8 +26,8 @@ public class CodeBlocksDisplay : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        int x = 524;
-        int y = 154;
+        float x = 523.5f;
+        int y = 153;
         int z = 0;
         float s1 = 0.15f;
         float s2 = 0.03f;
