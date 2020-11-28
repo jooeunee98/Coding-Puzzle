@@ -1,14 +1,12 @@
 ﻿<Properties StartupConfiguration="{6C3B321A-9867-99B8-5812-63D8AE1A3D18}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/starscale.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/cameramotion.cs">
     <Files>
-      <File FileName="Assets/script/clearbgm.cs" Line="5" Column="38" />
-      <File FileName="Assets/script/starsound.cs" Line="1" Column="1" />
-      <File FileName="Assets/script/starscale.cs" Line="28" Column="20" />
+      <File FileName="Assets/Scripts/cameramotion.cs" Line="50" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5b5e16d5-b986-4d3f-93fc-269c4349f19b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="322dd1ee-973d-479c-9aca-26735ab25aaf" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
