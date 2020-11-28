@@ -26,10 +26,10 @@ public class CodeBlocksDisplay : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        float x = 523.5f;
-        int y = 153;
+        int x = 25;
+        int y = -3;
         int z = 0;
-        float s1 = 0.15f;
+        float s1 = 0.5f;
         float s2 = 0.03f;
         // 커맨드 리스트 업데이트
         for(int i=0; i<comNum2; i++){
@@ -47,37 +47,37 @@ public class CodeBlocksDisplay : MonoBehaviour
                 Blocks[i].transform.parent = GameObject.FindWithTag("codeZoneCanvas").transform;
                 Blocks[i].transform.position = new Vector3(x,y,z);
                 Blocks[i].transform.localScale = new Vector3(s1,s1,s1);
-                x -= 4;
+                x += 12;
                 Arrows[i] = Instantiate(Resources.Load("prefab/arrowRealReal"), new Vector3(x,y,z), Quaternion.identity) as GameObject;
                 Arrows[i].transform.parent = GameObject.FindWithTag("codeZoneCanvas").transform;
                 Arrows[i].transform.localScale = new Vector3(s2,s2,s2);
                 Arrows[i].transform.localEulerAngles += new Vector3(0,180,0); 
-                x -= 4;
+                x += 12;
             } else if(commandLoaded2[i] == 2){
                 Blocks[i] = Instantiate(Resources.Load("prefab/right"), new Vector3(x,y,z), Quaternion.identity) as GameObject;
                 Blocks[i].transform.parent = GameObject.FindWithTag("codeZoneCanvas").transform;
                 Blocks[i].transform.position = new Vector3(x,y,z);
                 Blocks[i].transform.localScale = new Vector3(s1,s1,s1);
                 Blocks[i].transform.localEulerAngles += new Vector3(0,180,0); 
-                x -= 4;
+                x += 12;
                 Arrows[i] = Instantiate(Resources.Load("prefab/arrowRealReal"), new Vector3(x,y,z), Quaternion.identity) as GameObject;
                 Arrows[i].transform.parent = GameObject.FindWithTag("codeZoneCanvas").transform;
                 Arrows[i].transform.localScale = new Vector3(s2,s2,s2);
                 Arrows[i].transform.localEulerAngles += new Vector3(0,180,0); 
-                x -= 4;
+                x += 12;
             } else if(commandLoaded2[i] == 3){
                 Blocks[i] = Instantiate(Resources.Load("prefab/left"), new Vector3(x,y,z), Quaternion.identity) as GameObject;
                 Blocks[i].transform.parent = GameObject.FindWithTag("codeZoneCanvas").transform;
                 Blocks[i].transform.position = new Vector3(x,y,z);
                 Blocks[i].transform.localScale = new Vector3(s1,s1,s1);
                 Blocks[i].transform.localEulerAngles += new Vector3(0,180,0);
-                x -= 4;
+                x += 12;
 
                 Arrows[i] = Instantiate(Resources.Load("prefab/arrowRealReal"), new Vector3 (x,y,z), Quaternion.identity) as GameObject;
                 Arrows[i].transform.parent = GameObject.FindWithTag("codeZoneCanvas").transform;
                 Arrows[i].transform.localScale = new Vector3(s2,s2,s2);
                 Arrows[i].transform.localEulerAngles += new Vector3(0,180,0);  
-                x -= 4;
+                x += 12;
             } 
 
             

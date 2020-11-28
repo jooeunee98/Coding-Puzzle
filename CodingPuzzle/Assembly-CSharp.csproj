@@ -43,6 +43,8 @@
      <Compile Include="Assets\Scripts\CodeBlocksDisplay.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GroundSet.cs" />
+     <Compile Include="Assets\Scripts\ScrollLeftBtn.cs" />
+     <Compile Include="Assets\Scripts\ScrollRightBtn.cs" />
      <Compile Include="Assets\Scripts\StageSet.cs" />
      <Compile Include="Assets\Scripts\bgmFadeIn.cs" />
      <Compile Include="Assets\Scripts\btnMotion.cs" />
