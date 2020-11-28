@@ -1282,7 +1282,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 1039849616}
   m_Father: {fileID: 844316501}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1666,7 +1667,7 @@ GameObject:
   - component: {fileID: 1039849618}
   m_Layer: 0
   m_Name: codeCanvasCam
-  m_TagString: Untagged
+  m_TagString: codeCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1678,12 +1679,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039849615}
-  m_LocalRotation: {x: 0.000011604235, y: 0.99996465, z: -0.004808012, w: -0.0069008437}
-  m_LocalPosition: {x: 491.72998, y: 154.27144, z: 13.560097}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
+  m_LocalScale: {x: 2.5980763, y: 2.5980759, z: 2.598076}
   m_Children: []
-  m_Father: {fileID: 844316501}
-  m_RootOrder: 3
+  m_Father: {fileID: 791263523}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1039849618
 Camera:
@@ -2084,6 +2085,7 @@ GameObject:
   - component: {fileID: 1476079716}
   - component: {fileID: 1476079718}
   - component: {fileID: 1476079717}
+  - component: {fileID: 1476079719}
   m_Layer: 10
   m_Name: slideLeft
   m_TagString: Untagged
@@ -2144,6 +2146,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476079715}
   m_CullTransparentMesh: 0
+--- !u!114 &1476079719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476079715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e78a03ee2405744bfea9b92da134d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
 --- !u!224 &1516182503 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6787732945476511785, guid: 9174840c54bdb0a4289a1454b318a8b4,
@@ -2505,6 +2520,7 @@ GameObject:
   - component: {fileID: 2062543240}
   - component: {fileID: 2062543242}
   - component: {fileID: 2062543241}
+  - component: {fileID: 2062543243}
   m_Layer: 10
   m_Name: slideRight
   m_TagString: Untagged
@@ -2565,6 +2581,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062543239}
   m_CullTransparentMesh: 0
+--- !u!114 &2062543243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062543239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6455b5d2f3b4b4baa2448aa27edda9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
 --- !u!4 &2112908815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867563388300185860, guid: 9ee599d520dd72241b198322baf5736c,

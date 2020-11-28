@@ -6,6 +6,7 @@ TagManager:
   tags:
   - cmdZoneCanvas
   - codeZoneCanvas
+  - codeCam
   layers:
   - Default
   - TransparentFX
