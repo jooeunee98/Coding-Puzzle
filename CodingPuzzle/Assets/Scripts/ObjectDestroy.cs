@@ -17,23 +17,9 @@ public class ObjectDestroy : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            Destroy(player);
-            GameObject Player1 = Instantiate(Resources.Load("prefab/player")) as GameObject;
-            Player1.transform.position= new Vector3(0,68,50);
-            Player1.transform.localScale -= new Vector3(15, 15, 15);
-            player = GameObject.FindWithTag("clone");
-
-            playBtn.GetComponent<pressPlay>().player = player;
-        }
-        else if (col.tag == "clone")
-        {
-            Destroy(player);
-            GameObject Player2 = Instantiate(Resources.Load("prefab/player")) as GameObject;
-            Player2.transform.position = new Vector3(0, 68, 50);
-            Player2.transform.localScale -= new Vector3(15, 15, 15);
-            player = GameObject.FindWithTag("clone");
-
-            playBtn.GetComponent<pressPlay>().player = player;
+            Destroy(player.GetComponent<characterMotion>());
+            player.transform.position= new Vector3(0,68,50);
+            player.transform.localRotation= Quaternion.Euler(0, 90, 0);
         }
     }
     // Update is called once per frame
