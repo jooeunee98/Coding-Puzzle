@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
                         GameObject Water2 = Instantiate(Resources.Load("prefab/Water 02")) as GameObject;
                         int y2 = 55;
                         int s2 = 0;
-                        int y3 = 55;
+                        int y3 = 48;
                         int s3 = 0;
                         for (int k = 0; k <= 5; k++)
                         {

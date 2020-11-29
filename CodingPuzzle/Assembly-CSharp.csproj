@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\commandList.cs" />
      <Compile Include="Assets\Scripts\commandPop.cs" />
      <Compile Include="Assets\Scripts\fadeIn.cs" />
+     <Compile Include="Assets\Scripts\floatingAnimation.cs" />
      <Compile Include="Assets\Scripts\forIndexing.cs" />
      <Compile Include="Assets\Scripts\pressPlay.cs" />
      <Compile Include="Assets\Scripts\sceneChanger.cs" />

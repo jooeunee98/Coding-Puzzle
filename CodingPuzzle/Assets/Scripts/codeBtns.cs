@@ -8,6 +8,11 @@ public class codeBtns : MonoBehaviour
     AudioSource audio;
     int comNum;
     GameObject array;
+    GameObject player;
+
+    float startX, startY, startZ;
+    public float rx, ry, rz;
+
     // Start is called before the first frame update
     void Awake(){
         codeCam = GameObject.FindWithTag("codeCam");
@@ -17,6 +22,11 @@ public class codeBtns : MonoBehaviour
         audio = gameObject.GetComponent<AudioSource>();
         array = GameObject.Find("commandArray");
         comNum = array.GetComponent<commandList>().command.Length;
+
+        player = GameObject.Find("player");
+        startX = player.transform.position.x;
+        startY = player.transform.position.y;
+        startZ = player.transform.position.z;
     }
 
     // Update is called once per frame
@@ -28,8 +38,9 @@ public class codeBtns : MonoBehaviour
     public void resetBtn()
     {
         audio.Play();
-        GameObject.Find("player").transform.position= new Vector3(0,68,50);
-        GameObject.Find("player").transform.localRotation= Quaternion.Euler(0, 90, 0);
+        //Destroy(player.GetComponent<characterMotion>());
+        player.transform.position = new Vector3(startX, startY, startZ);
+        player.transform.localRotation = Quaternion.Euler(rx, ry, rz);
         GameObject.Find("player").GetComponent<characterMotion>().isSuccess = false;
         for (int i = 0; i < comNum; i++)
         {

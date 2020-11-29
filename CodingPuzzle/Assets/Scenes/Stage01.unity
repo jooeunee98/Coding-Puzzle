@@ -1737,7 +1737,7 @@ PrefabInstance:
     - target: {fileID: 4252344047829152342, guid: e138a11e2904e7147b5540458515c86b,
         type: 3}
       propertyPath: m_Name
-      value: camBtn
+      value: btns
       objectReference: {fileID: 0}
     - target: {fileID: 4252344048209766898, guid: e138a11e2904e7147b5540458515c86b,
         type: 3}
@@ -2077,6 +2077,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: deadZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 144117869380375331, guid: e2f061901f3d8504baf4173bdda4eea0,
+        type: 3}
+      propertyPath: ry
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 144117869380375342, guid: e2f061901f3d8504baf4173bdda4eea0,
         type: 3}
