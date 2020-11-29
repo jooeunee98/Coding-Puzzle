@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class codeBtns : MonoBehaviour
 {
+    private Animator animator;
+
     GameObject codeCam = null;
     AudioSource audio;
     int comNum;
     GameObject array;
     // Start is called before the first frame update
     void Awake(){
+        animator = GetComponent<Animator>();
         codeCam = GameObject.FindWithTag("codeCam");
     }
     void Start()
@@ -42,7 +45,10 @@ public class codeBtns : MonoBehaviour
         GameObject.Find("forIndexing").GetComponent<forIndexing>().indexNum=0;
 
         array.GetComponent<commandList>().index = 0;
-
+        
+        animator.SetBool("run", false);
+        animator.SetBool("idle", true);
+        animator.SetBool("dance", false);
 
     }
 

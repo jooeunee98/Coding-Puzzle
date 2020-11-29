@@ -5,8 +5,13 @@ using UnityEngine;
 public class ObjectDestroy : MonoBehaviour
 
 {
+    private Animator animator;
+
     GameObject player;
     GameObject playBtn;
+    void Awake(){
+        animator = GetComponent<Animator>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +25,10 @@ public class ObjectDestroy : MonoBehaviour
             Destroy(player.GetComponent<characterMotion>());
             player.transform.position= new Vector3(0,68,50);
             player.transform.localRotation= Quaternion.Euler(0, 90, 0);
+                
+            animator.SetBool("run", false);
+            animator.SetBool("idle", true);
+            animator.SetBool("dance", false);
         }
     }
     // Update is called once per frame
