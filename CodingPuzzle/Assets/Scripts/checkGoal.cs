@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class checkGoal : MonoBehaviour
 {
+    private Animator animator;
     public float delaySec;
     public GameObject obj;
     int trigger = 0;
@@ -11,8 +12,14 @@ public class checkGoal : MonoBehaviour
     float timeSpan;
 
     // Start is called before the first frame update
+
+    void Awake(){
+        animator = GetComponent<Animator>();
+
+    }
     void Start()
     {
+        
         sound = GameObject.Find("bgmPlayer");
     }
 
@@ -45,5 +52,7 @@ public class checkGoal : MonoBehaviour
             gameObject.transform.localScale = new Vector3(0, 0, 0);
             trigger = 1;
         }
+        GameObject.Find("player").GetComponent<characterMotion>().isSuccess = true;
+
     }
 }

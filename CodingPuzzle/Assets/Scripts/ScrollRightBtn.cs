@@ -8,7 +8,7 @@ public class ScrollRightBtn : MonoBehaviour, IPointerClickHandler
     GameObject codeCam = null;
     
     Vector3 moveRight = new Vector3(24,0,0);
-    bool moveBool = false;
+    public bool moveBool = false;
     public float delay = 1.0f;
 
     // Start is called before the first frame update
